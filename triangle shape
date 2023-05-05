@@ -1,0 +1,38 @@
+import java.applet.Applet;
+import java.awt.*;
+
+/**@authors: Joseph Nkomo
+ */
+public class Triangle extends Applet
+{
+
+    /**
+     * Initialization method that will be called after the applet is loaded into
+     * the browser.
+     */
+    public void init(){
+        setSize(700, 500);
+    }
+
+     public void paint(Graphics g) {
+        // Get the current size of the applet window
+       
+        
+        // Create a polygon that defines the triangle
+        Polygon triangle = new Polygon();
+        triangle.addPoint(280, 230);
+        triangle.addPoint(180, 30 );
+        triangle.addPoint(50, 230);
+        
+        // Fill the background with blue
+         g.setColor(Color.blue);
+        g.drawPolygon(triangle);
+        g.fillPolygon(triangle);
+        
+        // Draw the triangle with a red border
+      g.setColor(Color.red);
+      g.drawPolygon(triangle);
+        
+    }
+}
+ 
